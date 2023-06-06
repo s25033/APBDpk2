@@ -10,9 +10,9 @@
 
         public int IdWytwornia { get; set; }
 
-        public ICollection<Utwor> utwor { get; set; }
+        public virtual ICollection<Utwor> utwor { get; set; }
 
-        public Wytwornia wytwornia { get; set; }
+        public virtual Wytwornia wytwornia { get; set; }
 
     }
 }

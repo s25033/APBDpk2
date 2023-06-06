@@ -7,8 +7,8 @@
 
         public int IdUtwor { get; set; }
 
-        public Muzyk Muzyk { get; set; }
+        public virtual Muzyk Muzyk { get; set; }
 
-        public Utwor utwor { get; set; }
+        public virtual Utwor utwor { get; set; }
     }
 }

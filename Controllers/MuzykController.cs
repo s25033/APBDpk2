@@ -18,7 +18,7 @@ namespace APBDpk2.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetMuzyk(int id)
+        public async Task<IActionResult> GetMuzyk(int id)
         {
             var muzyk = _context.Muzycy
                 .Include(m => m.wykonawcaUtworu)
@@ -40,7 +40,7 @@ namespace APBDpk2.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddMuzyk(Muzyk muzyk)
+        public async Task<IActionResult> AddMuzykAsync(Muzyk muzyk)
         {
             using (var transaction = _context.Database.BeginTransaction())
             {
@@ -53,6 +53,18 @@ namespace APBDpk2.Controllers
                             if (wu.utwor != null && wu.utwor.IdUtwor == 0)
                             {
                                 _context.Utwory.Add(wu.utwor);
+                            }
+                            else if (wu.utwor == null)
+                            {
+                                return BadRequest("Utwór nie został przekazany lub ma nieprawidłowe ID.");
+                            }
+                            else
+                            {
+                                var existingUtwor = await _context.Utwory.FindAsync(wu.utwor.IdUtwor);
+                                if (existingUtwor == null)
+                                {
+                                    return NotFound("Nie znaleziono utworu o podanym ID.");
+                                }
                             }
                         }
                     }
@@ -67,7 +79,7 @@ namespace APBDpk2.Controllers
                 catch
                 {
                     transaction.Rollback();
-                    return StatusCode(500, "An error occurred while adding the musician.");
+                    return StatusCode(500, "Pojawił się błąd przy dodawaniu Muzyka");
                 }
             }
         }

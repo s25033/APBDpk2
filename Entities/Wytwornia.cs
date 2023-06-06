@@ -6,6 +6,6 @@
 
         public string Nazwa { get; set; }
 
-        public ICollection<Album > Album { get; set; }
+        public virtual ICollection<Album > Album { get; set; }
     }
 }

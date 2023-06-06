@@ -1,5 +1,6 @@
 ﻿using APBDpk2.Entities.Configs;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace APBDpk2.Entities
 {
@@ -31,6 +32,7 @@ namespace APBDpk2.Entities
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(WykonawcaUtworuEfConfiguration).Assembly);
+           
         }
     }
 }

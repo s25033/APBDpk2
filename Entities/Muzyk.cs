@@ -10,7 +10,7 @@
 
         public string? Pseudonim { get; set; }
 
-        public ICollection<WykonawcaUtworu> wykonawcaUtworu { get; set; }
+        public virtual ICollection<WykonawcaUtworu> wykonawcaUtworu { get; set; }
 
 
     }

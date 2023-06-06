@@ -3911,19 +3911,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Maja\\.nuget\\packages\\": {}
+    "C:\\Users\\pc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Maja\\source\\repos\\APBDpk2\\APBDpk2.csproj",
+      "projectUniqueName": "C:\\Users\\pc\\Source\\Repos\\APBDpk2\\APBDpk2.csproj",
       "projectName": "APBDpk2",
-      "projectPath": "C:\\Users\\Maja\\source\\repos\\APBDpk2\\APBDpk2.csproj",
-      "packagesPath": "C:\\Users\\Maja\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Maja\\source\\repos\\APBDpk2\\obj\\",
+      "projectPath": "C:\\Users\\pc\\Source\\Repos\\APBDpk2\\APBDpk2.csproj",
+      "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pc\\Source\\Repos\\APBDpk2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Maja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -11,8 +11,8 @@
 
         public int? IdAlbum { get; set; }
 
-        public ICollection<WykonawcaUtworu> wykonawcaUtworu { get; set; }  
+        public virtual ICollection<WykonawcaUtworu> wykonawcaUtworu { get; set; }  
 
-        public Album Album { get; set; }
+        public virtual Album Album { get; set; }
     }
 }
